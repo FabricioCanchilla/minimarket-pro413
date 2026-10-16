@@ -1,6 +1,6 @@
 # Minimarket PRO-413 - Sistema de microservicios para gestión de productos
 
-Buenos Dias tardes noches e aca mi readme espero y pueda comprenderlo 
+Buenos Dias tardes noches e aca mi readme espero y pueda comprenderlo
 
 Sistema compuesto por tres componentes independientes:
 
@@ -11,13 +11,13 @@ Sistema compuesto por tres componentes independientes:
 | Base de datos | MySQL 8.4 en Docker | 3307 (host) -> 3306 (contenedor) |
 
 ## Arquitectura
-lo que use 
+lo que use
 ```
 Navegador --> Frontend PHP (:8000) --HTTP/JSON--> Backend Quarkus (:8080) --JDBC--> MySQL en Docker (:3307)
 ```
 
 El frontend nunca se conecta a MySQL: toda operación pasa por la API REST.
-costo un poquito 
+costo un poquito
 
 ## Estructura del repositorio
 
@@ -121,7 +121,7 @@ docker compose down
 ```
 
 Los datos se conservan en el volumen. Para borrarlos también: `docker compose down -v`.
-Muchas gracias por su atencion hasta otro momento 
+Muchas gracias por su atencion hasta otro momento
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠖⠛⠉⠉⠉⠉⠁⠀⠀⠈⠉⠉⠙⠒⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠚⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢦⡀⠀⠀⠀⠀⠀⠀⠀
