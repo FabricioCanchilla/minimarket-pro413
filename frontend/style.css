@@ -1,0 +1,42 @@
+body { font-family: Arial, sans-serif;
+    margin: 30px; background: #f5f6fa;
+    color: #222; }
+h1 { margin-bottom: 20px;
+}
+table { border-collapse: collapse;
+    width: 100%; background: #fff;
+    }
+th, td { border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: left;
+}
+th { background: #2f3640; color: #fff;
+}
+.btn, button { background: #0984e3; color: #fff;
+    border: 0; padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration:
+    none; font-size: 14px;
+}
+button.rojo { background: #d63031;
+}
+.ok { background: #dff9e5; padding: 10px;
+    border-radius: 4px;
+}
+.error { background: #fddede;
+    padding: 10px;
+    border-radius: 4px;
+}
+form.inline { display: inline;
+}
+form.datos label { display: block;
+    margin-top: 12px;
+}
+form.datos input { padding: 6px;
+    width: 300px;
+    display: block;
+    margin-top: 4px;
+}
+form.datos p { margin-top: 20px;
+}
