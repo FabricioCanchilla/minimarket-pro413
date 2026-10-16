@@ -1,7 +1,5 @@
 # Minimarket PRO-413 - Sistema de microservicios para gestión de productos
 
-Buenos Dias tardes noches e aca mi readme espero y pueda comprenderlo
-
 Sistema compuesto por tres componentes independientes:
 
 | Componente | Tecnología | Puerto |
@@ -11,7 +9,6 @@ Sistema compuesto por tres componentes independientes:
 | Base de datos | MySQL 8.4 en Docker | 3307 (host) -> 3306 (contenedor) |
 
 ## Arquitectura
-lo que use
 ```
 Navegador --> Frontend PHP (:8000) --HTTP/JSON--> Backend Quarkus (:8080) --JDBC--> MySQL en Docker (:3307)
 ```
@@ -116,34 +113,6 @@ docker exec -it minimarket-mysql mysql -u root -p db_minimarket_pro413 -e "SELEC
 
 ## Detener los servicios
 
-```
 docker compose down
-```
 
-Los datos se conservan en el volumen. Para borrarlos también: `docker compose down -v`.
-Muchas gracias por su atencion hasta otro momento
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠖⠛⠉⠉⠉⠉⠁⠀⠀⠈⠉⠉⠙⠒⠦⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⣠⡴⠚⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢦⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣰⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢲⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣆⠀⠀⠀⠀
-⠀⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡆⠀⠀⠀
-⠀⠀⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⢀⠞⠀⠀⠀⠀⠀⠀⢻⠀⠀⠀
-⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⠀⠀⠀⠀⡇⠀⠀⠀⡞⠀⠀⠀⠀⠀⠀⠀⢸⡆⠀⠀
-⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡀⠀⡜⠁⠀⠀⠸⡇⠀⠀⠀⠀⣠⠇⠀⠀⢹⡄⠀
-⠀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣦⣤⣤⣀⠀⠉⠒⣦⣤⣆⣰⡄⣳⢤⠀⠒⠚⠁⠀⠀⠀⠀⡇⠀
-⠀⠀⠸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣦⣬⣍⡙⠛⠷⠞⠁⣯⣿⣿⠿⠻⣾⣀⣤⣤⡶⠦⠤⠀⠀⣿⠀
-⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⣞⣿⣩⣿⣿⣿⣷⣧⣧⠛⠁⠀⠀⠀⠀⠀⣿⠿⣶⣦⣄⡀⠀⠀⡏⠀
-⠀⠀⠀⠘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣻⡏⠉⢙⣏⠉⢻⡆⠀⠀⠀⠀⠀⠀⢀⠿⠶⣾⠛⣿⢯⡄⠀⣧⠀
-⠀⠀⠀⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⠋⠛⣿⠛⣿⢿⠿⠿⠃⠀⠀⠀⠀⠀⢰⡈⠲⠤⢿⣦⣿⡿⠃⠀⠘⡇
-⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⡟⠀⠀⠀⢰⠁⠀⠀⢹⢸⣿⠃⠀⠀⡀⠀⠀⠀⠀⠀⠘⣧⡀⠀⠀⣧⠀⣷⠀⠀⠀⡏
-⠀⠀⠀⠀⠀⠀⠻⡄⠀⠀⠀⠀⣇⠀⠀⠀⠾⠀⠀⠀⢸⡟⠁⠀⣠⡞⠁⣀⠀⠀⠀⠀⠀⠈⠳⣤⠀⢹⡆⣿⠀⠀⢀⡇
-⠀⠀⠀⠀⠀⠀⠀⢿⠀⠀⠀⠀⢹⡆⠀⠀⠀⠀⠀⠀⢈⡇⠀⣴⠋⢸⡏⠉⠀⠀⠀⠀⠀⠀⣠⣟⠀⠘⣇⣿⡀⢀⡾⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠈⢷⡀⠀⠀⠀⠀⠀⣼⠁⣼⠁⠀⠀⠙⠒⠀⠸⡏⠀⠰⣶⠏⠸⡆⠀⡟⢹⢁⡾⠁⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⡆⠻⣄⠀⠀⠀⠀⣿⣼⠃⠀⢠⣤⣤⣄⣀⣴⣧⣤⣤⡷⣤⡀⢿⣠⡇⣸⡾⠁⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢸⠆⠀⠀⠀⠀⢸⠀⠈⠳⣄⠀⠀⡏⣿⠀⠀⡿⢼⠦⠄⣨⣇⠀⡀⣼⠀⢨⣿⠋⡹⢠⡟⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢀⡞⠀⠀⠀⠀⣀⡾⠀⠀⠀⠈⠻⢾⡅⠸⣖⠌⠷⣼⣀⣀⣴⣧⣴⣦⣾⠶⠶⠏⣰⠇⣸⠇⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢸⠁⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠈⠛⢦⣿⣄⠀⠀⠀⠀⢺⡟⠛⠓⢻⠓⠓⣺⢣⣾⠏⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣠⠟⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠻⣦⣀⠀⠀⠈⠣⣀⣄⡎⢀⣼⠷⠋⠈⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣰⠏⠀⠀⠀⠀⢀⡼⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⠇⢈⠉⠛⠓⠚⢻⡟⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⢀⣀⣴⣞⡁⠀⠀⠀⣀⣠⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠦⣄⠀⠀⠈⠷⠤⣤⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀
+Los datos se conservan en el volumen `mysql_data`. El script `database/init.sql` solo se ejecuta la primera vez, cuando el volumen está vacío. Para borrar los datos y reconstruir la base desde cero: `docker compose down -v` y luego `docker compose up -d`.
