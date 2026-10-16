@@ -14,7 +14,6 @@ Navegador --> Frontend PHP (:8000) --HTTP/JSON--> Backend Quarkus (:8080) --JDBC
 ```
 
 El frontend nunca se conecta a MySQL: toda operación pasa por la API REST.
-costo un poquito
 
 ## Estructura del repositorio
 
